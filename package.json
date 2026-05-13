@@ -1,0 +1,12 @@
+{
+  "name": "pantheon-fleet-server",
+  "version": "1.0.0",
+  "description": "Pantheon Mining Fleet — 5000 instances",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
