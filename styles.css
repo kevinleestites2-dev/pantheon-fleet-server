@@ -1,0 +1,351 @@
+/* ============================================================
+   PANTHEON MINER — Isu Theme
+   Dark gold + Isu purple + Forge black
+   ============================================================ */
+
+:root {
+  --pantheon-primary:   #d4af37;
+  --pantheon-secondary: #6b21a8;
+  --pantheon-accent:    #ffd700;
+  --pantheon-bg:        #0a0a0a;
+  --pantheon-card:      #111111;
+  --pantheon-border:    rgba(212, 175, 55, 0.3);
+  --pantheon-glow:      rgba(212, 175, 55, 0.15);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--pantheon-bg) !important;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* ---- HEADER ---- */
+.pantheon-header {
+  padding: 20px 0 10px;
+  border-bottom: 1px solid var(--pantheon-border);
+  margin-bottom: 16px;
+}
+
+.isu-eye {
+  font-size: 32px;
+  filter: drop-shadow(0 0 12px #ffd700);
+  animation: eyePulse 3s ease-in-out infinite;
+}
+
+@keyframes eyePulse {
+  0%, 100% { filter: drop-shadow(0 0 8px #ffd700); }
+  50%       { filter: drop-shadow(0 0 20px #ffd700) drop-shadow(0 0 40px #d4af37); }
+}
+
+.pantheon-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  background: linear-gradient(135deg, #ffd700, #d4af37, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 8px 0 4px;
+}
+
+.pantheon-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  color: #6b21a8;
+  text-transform: uppercase;
+}
+
+.autoplay-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 12px;
+  background: linear-gradient(90deg, #6b21a8, #4c1d95);
+  border: 1px solid #7c3aed;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #ddd6fe;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(124,58,237,0.4); }
+  50%       { box-shadow: 0 0 16px rgba(124,58,237,0.8); }
+}
+
+/* ---- WALLET / WAR CHEST ---- */
+.wallet-container {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 1px solid var(--pantheon-border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 20px var(--pantheon-glow);
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: #888;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: block;
+}
+
+.gold { color: var(--pantheon-accent) !important; }
+.purple { color: #a78bfa !important; }
+
+.wallet-address {
+  font-size: 0.7rem;
+  color: #555;
+  font-family: monospace;
+}
+
+/* ---- BUTTONS ---- */
+.btn-pantheon {
+  background: linear-gradient(135deg, #6b21a8, #4c1d95);
+  border: 1px solid #7c3aed;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-pantheon:hover:not(:disabled) {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  box-shadow: 0 0 12px rgba(124,58,237,0.5);
+}
+.btn-pantheon:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.btn-claim-ready {
+  animation: claimPulse 1s ease-in-out infinite;
+}
+@keyframes claimPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(212,175,55,0.4); }
+  50%       { box-shadow: 0 0 20px rgba(212,175,55,0.9); }
+}
+
+/* ---- MINE BUTTON ---- */
+.mine-container { position: relative; }
+
+.btn-mine {
+  background: linear-gradient(135deg, #b8860b, #d4af37, #ffd700);
+  border: none;
+  color: #0a0a0a;
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  padding: 18px 48px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.15s;
+  box-shadow: 0 4px 20px rgba(212,175,55,0.4);
+  min-width: 220px;
+}
+.btn-mine:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 28px rgba(212,175,55,0.7);
+}
+.btn-mine:active {
+  transform: scale(0.97);
+}
+
+.mine-icon { margin-right: 8px; }
+
+/* ---- STAT BOXES ---- */
+.stat-box {
+  background: var(--pantheon-card);
+  border: 1px solid var(--pantheon-border);
+  border-radius: 10px;
+  padding: 12px 8px;
+}
+
+/* ---- SHOP ---- */
+.shop-container {
+  background: var(--pantheon-card);
+  border: 1px solid var(--pantheon-border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.shop-title {
+  color: var(--pantheon-accent);
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.btn-shop {
+  width: 100%;
+  background: linear-gradient(145deg, #1a1a1a, #222);
+  border: 1px solid var(--pantheon-border);
+  color: #e0e0e0;
+  padding: 10px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+  line-height: 1.4;
+}
+.btn-shop:hover {
+  border-color: var(--pantheon-accent);
+  box-shadow: 0 0 10px var(--pantheon-glow);
+  color: var(--pantheon-accent);
+}
+
+.sell-btn {
+  border-color: rgba(167,139,250,0.4);
+}
+.sell-btn:hover {
+  border-color: #a78bfa;
+  color: #a78bfa;
+  box-shadow: 0 0 10px rgba(167,139,250,0.2);
+}
+
+/* ---- MINING VISUALIZATION ---- */
+.mining-visualization-container {
+  background: var(--pantheon-card);
+  border: 1px solid var(--pantheon-border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.mining-header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12px;
+}
+
+.mining-stat {
+  text-align: center;
+}
+
+.hash-display-container {
+  background: #0d0d0d;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hash-zeros { color: #22c55e; font-weight: bold; }
+.hash-rest  { color: #555; }
+
+.progress-bar-gold {
+  background: linear-gradient(90deg, #b8860b, #ffd700);
+}
+
+/* ---- CHART ---- */
+.chart-container {
+  background: var(--pantheon-card);
+  border: 1px solid var(--pantheon-border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.chart-title {
+  color: var(--pantheon-accent);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* ---- AUTOPLAY STATUS ---- */
+.autoplay-status {
+  background: linear-gradient(145deg, #0d0d1a, #111122);
+  border: 1px solid rgba(107,33,168,0.4);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.75rem;
+}
+
+.status-label {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: #7c3aed;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.autoplay-log {
+  margin-top: 6px;
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #555;
+  text-align: left;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+/* ---- FLEET INFO ---- */
+.fleet-info { font-size: 0.7rem; }
+.gold-link { color: var(--pantheon-accent) !important; text-decoration: none; }
+.gold-link:hover { text-decoration: underline; }
+
+/* ---- HELPERS ---- */
+.helper {
+  font-size: 24px;
+  display: inline-block;
+  animation: bob 1s infinite;
+}
+
+@keyframes bob {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---- FLASH ANIMATION ---- */
+.flash-gold {
+  animation: goldFlash 0.6s ease-out;
+}
+@keyframes goldFlash {
+  0%   { color: #fff; text-shadow: 0 0 20px #ffd700; }
+  100% { color: var(--pantheon-accent); text-shadow: none; }
+}
+
+/* ---- MINE ANIMATIONS ---- */
+.mine-animation {
+  display: none;
+  font-size: 40px;
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+#mine-animation-left  { left: -50px; top: 50%; transform: translateY(-50%) scaleX(-1); }
+#mine-animation-right { right: -50px; top: 50%; transform: translateY(-50%); }
+
+.mine-animation.active {
+  display: block;
+  animation: mineSwing 0.5s ease-out;
+}
+@keyframes mineSwing {
+  0%   { opacity: 0; transform: translateY(-50%) scale(0.8); }
+  40%  { opacity: 1; transform: translateY(-50%) scale(1.2); }
+  100% { opacity: 0; transform: translateY(-50%) scale(0.8); }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 480px) {
+  .pantheon-title { font-size: 1.4rem; letter-spacing: 2px; }
+  .btn-mine { padding: 14px 32px; font-size: 0.95rem; min-width: 180px; }
+}
